@@ -1,0 +1,26 @@
+WinBall — Third-party font attribution
+=======================================
+
+Font:      EnkaDotMincho24 (えんかどっと明朝 24)
+Used for:  Japanese-language UI text (res/font/enka_dot_mincho.ttf)
+Designer:  Enthiesia (エンゼシア)
+Source:    https://enthiesia.booth.pm/items/6784922
+License:   SIL Open Font License, Version 1.1 (OFL-1.1)
+           Commercial use permitted ("商用利用可・フリーフォント").
+
+This font is licensed under the SIL Open Font License, Version 1.1.
+The full OFL text is available at:
+  https://openfontlicense.org/open-font-license-official-text/
+  (or the OFL.txt included in the font's original download package).
+
+OFL summary (for reference — the full license governs):
+  - The fonts may be used, studied, modified and redistributed freely,
+    including bundled inside applications and games, commercial or not.
+  - The fonts may NOT be sold on their own (bundling in a larger work,
+    such as this app, is fine).
+  - This attribution/copyright notice must be kept with the font.
+  - If the license declares a Reserved Font Name, a MODIFIED version of
+    the font must not be distributed under that name. WinBall ships the
+    font unmodified, so no renaming is required.
+
+Copyright (c) Enthiesia, with Reserved Font Name "EnkaDotMincho".

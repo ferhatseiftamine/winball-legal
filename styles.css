@@ -31,6 +31,7 @@
   --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --font-body:    "Hanken Grotesk", system-ui, -apple-system, sans-serif;
   --font-mono:    "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-title:   "Enka Dot Mincho", "Bricolage Grotesque", "Segoe UI", sans-serif;
 
   /* Radius */
   --r-sm: 8px;
@@ -46,6 +47,16 @@
   --w-text: 680px;
 
   color-scheme: dark;
+}
+
+/* ---- Web font: Enka Dot Mincho (dot-mincho) for display titles.
+       OFL-licensed, subset to Latin (see assets/fonts/OFL-EnkaDotMincho.txt). ---- */
+@font-face {
+  font-family: "Enka Dot Mincho";
+  src: url("/assets/fonts/enka.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* ---- Reset ---- */
@@ -101,10 +112,10 @@ section { position: relative; }
   flex: none;
 }
 .display {
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  font-family: var(--font-title);
+  font-weight: 400;           /* dot-mincho is single-weight; avoid faux-bold smear */
+  letter-spacing: 0;          /* pixel glyphs need no negative tracking */
+  line-height: 1.18;
   text-wrap: balance;
 }
 .lead { color: var(--text-2); font-size: 1.075rem; max-width: 52ch; }
