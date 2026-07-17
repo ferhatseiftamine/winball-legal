@@ -77,53 +77,6 @@
     </div>
   </section>
 
-  <!-- Listen -->
-  <section class="section" id="listen">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Sound</p>
-        <h2 class="display">Press play</h2>
-      </div>
-
-      <div class="player-wrap">
-        <div class="aero" role="group" aria-label="Music player">
-          <div class="aero-top">
-            <div class="aero-art" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M9 17V5l10-2v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="7" cy="17" r="2.4" fill="currentColor"/>
-                <circle cx="17" cy="15" r="2.4" fill="currentColor"/>
-              </svg>
-            </div>
-            <div class="aero-meta">
-              <div class="aero-title">Untitled track</div>
-              <div class="aero-sub">Scanlyne</div>
-            </div>
-          </div>
-
-          <div class="aero-progress">
-            <div class="aero-trackbar"><div class="aero-fill"></div></div>
-            <div class="aero-times"><span class="aero-cur">0:00</span><span class="aero-dur">0:00</span></div>
-          </div>
-
-          <div class="aero-controls">
-            <button type="button" class="aero-btn sm" aria-label="Restart">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h2v14H7z M20 5l-10 7 10 7z"/></svg>
-            </button>
-            <button type="button" class="aero-btn aero-play" aria-label="Play or pause">
-              <svg class="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7z M13 5h4v14h-4z"/></svg>
-            </button>
-            <button type="button" class="aero-btn sm" aria-label="Mute">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9v6h4l5 5V4L8 9z"/></svg>
-            </button>
-          </div>
-
-          <audio preload="metadata" src="/assets/audio/track.mp3"></audio>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Studio -->
   <section class="section" id="studio">
@@ -201,6 +154,57 @@
   </div>
 </footer>
 
+<!-- Floating music player (follows scroll) -->
+<div class="aero-dock" id="aeroDock">
+  <button type="button" class="aero-bubble" aria-label="Open music player">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M9 17V5l10-2v12" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7" cy="17" r="2.4" fill="currentColor"/>
+      <circle cx="17" cy="15" r="2.4" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <div class="aero" role="group" aria-label="Music player">
+    <button type="button" class="aero-min" aria-label="Minimize player">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="aero-top">
+      <div class="aero-art" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M9 17V5l10-2v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="7" cy="17" r="2.4" fill="currentColor"/>
+          <circle cx="17" cy="15" r="2.4" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="aero-meta">
+        <div class="aero-title">Untitled track</div>
+        <div class="aero-sub">Scanlyne</div>
+      </div>
+    </div>
+
+    <div class="aero-progress">
+      <div class="aero-trackbar"><div class="aero-fill"></div></div>
+      <div class="aero-times"><span class="aero-cur">0:00</span><span class="aero-dur">0:00</span></div>
+    </div>
+
+    <div class="aero-controls">
+      <button type="button" class="aero-btn sm" aria-label="Restart">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h2v14H7z M20 5l-10 7 10 7z"/></svg>
+      </button>
+      <button type="button" class="aero-btn aero-play" aria-label="Play or pause">
+        <svg class="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7z M13 5h4v14h-4z"/></svg>
+      </button>
+      <button type="button" class="aero-btn sm" aria-label="Mute">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9v6h4l5 5V4L8 9z"/></svg>
+      </button>
+    </div>
+
+    <audio preload="metadata" src="/assets/audio/track.mp3"></audio>
+  </div>
+</div>
+
 <script>
 (function () {
   var p = document.querySelector('.aero');
@@ -242,6 +246,13 @@
     audio.muted = !audio.muted;
     muteEl.style.opacity = audio.muted ? '0.5' : '1';
   });
+
+  // Minimize to a bubble / expand back.
+  var dock   = document.getElementById('aeroDock');
+  var minEl  = p.querySelector('.aero-min');
+  var bubble = dock ? dock.querySelector('.aero-bubble') : null;
+  if (minEl && dock)  minEl.addEventListener('click', function () { dock.classList.add('min'); });
+  if (bubble && dock) bubble.addEventListener('click', function () { dock.classList.remove('min'); });
 })();
 </script>
 
