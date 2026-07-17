@@ -3,29 +3,162 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scanlyne</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6; max-width: 620px; margin: 0 auto; padding: 56px 20px; color: #1a1a1a; background: #fff; }
-  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #14171c; } a { color: #6cb6ff; } }
-  h1 { font-size: 2.2rem; margin-bottom: 2px; }
-  .tag { color: #777; margin-bottom: 2rem; }
-  ul { list-style: none; padding: 0; }
-  li { margin: 12px 0; }
-  a { color: #0a66c2; font-size: 1.1rem; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-</style>
+<title>Scanlyne — Independent games & apps studio</title>
+<meta name="description" content="Scanlyne is an independent studio that designs, builds, and ships its own mobile games and apps. First game: WinBall.">
+<meta name="theme-color" content="#0c0d10">
+<meta property="og:title" content="Scanlyne">
+<meta property="og:description" content="An independent studio building its own games and apps.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scanlyne.dev">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1' y='1' width='24' height='24' rx='7' fill='%230c0d10'/%3E%3Cpath d='M7 9.5h12' stroke='%23eceef1' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M7 13h12' stroke='%23ff5a3c' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M7 16.5h8' stroke='%23eceef1' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<h1>Scanlyne</h1>
-<p class="tag">Game studio · Makers of WinBall</p>
-<h2>Legal</h2>
-<ul>
-  <li>→ <a href="/privacy">Privacy Policy</a></li>
-  <li>→ <a href="/terms">Terms of Service</a></li>
-  <li>→ <a href="/delete-account">Account &amp; Data Deletion</a></li>
-</ul>
-<p class="tag">Contact: <a href="mailto:scanlynedev@gmail.com">scanlynedev@gmail.com</a></p>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Scanlyne home">
+      <svg class="mark" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <rect x="1.25" y="1.25" width="23.5" height="23.5" rx="7" stroke="currentColor" stroke-opacity="0.28"/>
+        <path d="M7 9.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M7 13h12" stroke="#ff5a3c" stroke-width="2" stroke-linecap="round"/>
+        <path d="M7 16.5h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="name">Scanlyne</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#studio">Studio</a>
+      <a class="mono contact-link" href="mailto:scanlynedev@gmail.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow reveal" data-d="1">Independent studio</p>
+      <h1 class="display reveal" data-d="2">An independent studio building its own games and apps.</h1>
+      <p class="lead reveal" data-d="3">Scanlyne designs, builds, and ships mobile products end to end. We are small on purpose, and we care about how things feel. Our first game, WinBall, is on the way.</p>
+      <div class="hero-cta reveal" data-d="4">
+        <a class="btn btn-primary" href="#work">See what we're building <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="mailto:scanlynedev@gmail.com">Get in touch</a>
+      </div>
+
+      <div class="facts reveal" data-d="4">
+        <div class="fact"><div class="k">Established</div><div class="v">2026</div></div>
+        <div class="fact"><div class="k">Based in</div><div class="v">Algeria</div></div>
+        <div class="fact"><div class="k">Platform</div><div class="v">Android</div></div>
+        <div class="fact"><div class="k">First release</div><div class="v">WinBall</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What we're building</p>
+        <h2 class="display">Currently in the workshop</h2>
+      </div>
+
+      <div class="work-list">
+        <article class="product">
+          <div class="thumb"><img src="/assets/winball.png" alt="WinBall app icon" width="76" height="76"></div>
+          <div class="pbody">
+            <div class="pname">WinBall <span class="chip">In development</span></div>
+            <p class="pdesc">Fast, physics-based arena football for Android. Quick matches, online and same-network multiplayer, and a lot of last-second goals.</p>
+          </div>
+          <span class="plink">Coming to Google Play</span>
+        </article>
+      </div>
+
+      <div class="more-note">
+        <span class="dot" aria-hidden="true"></span>
+        More games and apps are in early development. This page grows as they ship.
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio -->
+  <section class="section" id="studio">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Studio</p>
+        <h2 class="display">How we work</h2>
+      </div>
+
+      <div class="approach">
+        <div class="cell">
+          <h3>Our own products</h3>
+          <p>We build and publish our own games and apps, not client work. The roadmap is ours to get right, and we answer to the people who play them.</p>
+        </div>
+        <div class="cell">
+          <h3>Small on purpose</h3>
+          <p>A small team moves quickly and keeps taste consistent. Fewer people means fewer compromises between the idea and what actually ships.</p>
+        </div>
+        <div class="cell">
+          <h3>The feel matters</h3>
+          <p>Controls, motion, and the small moments get the most attention. That is usually the difference between something you try once and something you keep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <p class="eyebrow" style="margin-bottom:18px">Contact</p>
+          <h2 class="display">Have a question, or just want to say hello?</h2>
+        </div>
+        <a class="mailto" href="mailto:scanlynedev@gmail.com">scanlynedev@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Scanlyne home">
+          <svg class="mark" width="24" height="24" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+            <rect x="1.25" y="1.25" width="23.5" height="23.5" rx="7" stroke="currentColor" stroke-opacity="0.28"/>
+            <path d="M7 9.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M7 13h12" stroke="#ff5a3c" stroke-width="2" stroke-linecap="round"/>
+            <path d="M7 16.5h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="name">Scanlyne</span>
+        </a>
+        <p>An independent studio building its own games and apps.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a href="#work">Work</a>
+          <a href="#studio">How we work</a>
+          <a href="mailto:scanlynedev@gmail.com">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/delete-account">Data &amp; deletion</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 Scanlyne. All rights reserved.</span>
+      <span class="mono">scanlyne.dev</span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
