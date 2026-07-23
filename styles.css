@@ -89,16 +89,17 @@ h1, h2, h3, h4, p { margin: 0; }
 
 /* ---- Global ordered-dither grain ----
    A fixed, non-interactive Bayer-dither tile laid over the whole page — the same
-   retro dithering the WinBall app splash uses, echoed site-wide. Pixel-crisp,
-   multiplies onto the content so it reads as fine grain rather than a wash. */
+   retro dithering the WinBall app splash uses, echoed site-wide. White dots at low
+   opacity (dark dots would vanish on this near-black site), scaled up so the
+   ordered pattern is actually visible, and kept pixel-crisp. */
 body::after {
   content: "";
   position: fixed; inset: 0;
   z-index: 9998; pointer-events: none;
-  background: url("/assets/dither.png") repeat;
-  background-size: 3px 3px;
+  background: url("/assets/dither.png?v=2") repeat;
+  background-size: 8px 8px;
   image-rendering: pixelated;
-  mix-blend-mode: multiply;
+  opacity: 0.9;
 }
 @media print { body::after { display: none; } }
 
