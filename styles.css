@@ -156,6 +156,9 @@ section { position: relative; }
   font-family: var(--font-display);
   font-weight: 700; font-size: 1.06rem; letter-spacing: -0.01em;
 }
+/* The header wordmark is the cropped SCANLYNE logo (from the app splash's final
+   frame) rather than text, so the top matches the game's own identity. */
+.brand-logo { height: 26px; width: auto; display: block; }
 .nav { display: flex; align-items: center; gap: 30px; }
 .nav a {
   font-size: 0.92rem; color: var(--text-2);
