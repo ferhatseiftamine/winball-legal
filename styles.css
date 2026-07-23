@@ -97,9 +97,9 @@ body::after {
   position: fixed; inset: 0;
   z-index: 9998; pointer-events: none;
   background: url("/assets/dither.png?v=2") repeat;
-  background-size: 8px 8px;
+  background-size: 5px 5px;
   image-rendering: pixelated;
-  opacity: 0.9;
+  opacity: 0.5;
 }
 @media print { body::after { display: none; } }
 
